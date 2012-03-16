@@ -2,7 +2,7 @@
 /*
 Plugin Name: Series Of Posts
 Plugin URI: http://mikslatvis.com
-Description: You can finally make a list of articles.
+Description: Allows you to add posts to a series and show the list by the posts.
 Version: 0.3
 Author: Miks Latvis
 Author URI: http://mikslatvis.com
