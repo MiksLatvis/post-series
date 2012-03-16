@@ -1,7 +1,7 @@
 #series-of-posts {
 float: right;
 position: relative;
-background: #fbfaf5 url('linijas.png') repeat-y top left;
+background: #fbfaf5 url('lines.png') repeat-y top left;
 width: 280px;
 z-index: 10;
 margin: -20px -40px 20px 40px; 
