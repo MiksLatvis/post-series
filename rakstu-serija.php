@@ -36,7 +36,7 @@ add_filter( 'the_content', 'my_the_content_filter', 20 );
  */
 function my_the_content_filter( $content ) {
 
-    if ( is_single() )
+    if ( is_single() && has_term('', 'series_of_posts') )
         
         {
 
@@ -72,7 +72,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 endwhile;
 
 // Reset Post Data
-wp_reset_postdata();
+wp_reset_postdata(); 
 
 
  ?>
@@ -85,7 +85,7 @@ wp_reset_postdata();
 
 
     // Returns the content.
-    return $content; }
+    return $content; } else {return $content;}
 }
 
 
