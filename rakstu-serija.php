@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Rakstu Sērija
+Plugin Name: Series Of Posts
 Plugin URI: http://mikslatvis.com
 Description: You can finally make a list of articles.
-Version: 0.1
+Version: 0.3
 Author: Miks Latvis
 Author URI: http://mikslatvis.com
 License: GPL2
@@ -12,7 +12,7 @@ License: GPL2
 
 wp_enqueue_style( 'my-style', plugins_url( '/style.css', __FILE__ ), false, '1.0', 'all' ); // Inside a plugin
 
-function people_init() {
+function series_of_posts_init() {
 	// create a new taxonomy
 	register_taxonomy(
 		'series_of_posts',
@@ -25,16 +25,16 @@ function people_init() {
 		)
 	);
 }
-add_action( 'init', 'people_init' );
+add_action( 'init', 'series_of_posts_init' );
 
 
-add_filter( 'the_content', 'my_the_content_filter', 20 );
+add_filter( 'the_content', 'series_of_posts_filter', 20 );
 /**
  * Add a icon to the beginning of every post page.
  *
  * @uses is_single()
  */
-function my_the_content_filter( $content ) {
+function series_of_posts_filter( $content ) {
 
     if ( is_single() && has_term('', 'series_of_posts') )
         
@@ -43,18 +43,18 @@ function my_the_content_filter( $content ) {
 $terms = get_terms('series_of_posts');
  $count = count($terms);
  if ( $count > 0 ){
-     echo "<div id='rakstu-serija'><ul>";
+     echo "<div id='series-of-posts'><ul>";
      foreach ( $terms as $term ) {
-       echo "<p class='viena-serija'>" . $term->name . ":</p>";
+       echo "<p class='one-series'>" . $term->name . ":</p>";
        
-       $seriju_liste = $term->slug; 
+       $series_of_posts = $term->slug; 
 		
 		$args = array(
 	'tax_query' => array(
 		array(
 			'taxonomy' => 'series_of_posts',
 			'field' => 'slug',
-			'terms' => $seriju_liste
+			'terms' => $series_of_posts
 		)
 	)
 );
@@ -64,7 +64,7 @@ $terms = get_terms('series_of_posts');
 
 // The Loop
 while ( $the_query->have_posts() ) : $the_query->the_post();
-	echo '<li class="viena-saite">'; ?>
+	echo '<li class="one-link">'; ?>
 	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 
 	
