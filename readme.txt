@@ -11,7 +11,7 @@ WordPress plugin which adds functionality to make series of posts. It also displ
 = Features =
 
 * Add post to a one or multiple post series.
-* Display list of the posts at the beginning 
+* Display list of the posts in the series at the beginning of the post.
 * Have any suggestions we should include in the next update? Email: miks.latvis@gmail.com
 
 == Installation ==

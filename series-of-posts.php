@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Series Of Posts
+Plugin Name: Post Series
 Plugin URI: http://mikslatvis.com
 Description: Allows you to add posts to a series and show the list by the posts.
-Version: 0.3
+Version: 0.4
 Author: Miks Latvis
 Author URI: http://mikslatvis.com
 License: GPL2
@@ -30,9 +30,8 @@ add_action( 'init', 'series_of_posts_init' );
 
 add_filter( 'the_content', 'series_of_posts_filter', 20 );
 /**
- * Add a icon to the beginning of every post page.
+ * Add a series box to the beginning of post page wich have a series.
  *
- * @uses is_single()
  */
 function series_of_posts_filter( $content ) {
 
@@ -43,7 +42,7 @@ function series_of_posts_filter( $content ) {
 $terms = get_terms('series_of_posts');
  $count = count($terms);
  if ( $count > 0 ){
-     echo "<div id='series-of-posts'><ul>";
+     echo "<div id='series-of-posts-box'><ul>";
      foreach ( $terms as $term ) {
        echo "<p class='one-series'>" . $term->name . ":</p>";
        
