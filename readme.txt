@@ -12,6 +12,7 @@ WordPress plugin which adds functionality to make series of posts. It also displ
 
 * Add post to a one or multiple post series.
 * Display list of the posts in the series at the beginning of the post.
+* Extra functionality will follow.
 * Have any suggestions we should include in the next update? Email: miks.latvis@gmail.com
 
 == Installation ==
@@ -27,7 +28,7 @@ Post Installation
 3. Update post and have a look at you new post series.
 4. Go to another post and give the same series name.
 
-== Changelog ==
+== Change log ==
 
 = Post Series 0.3 - 16/03/2012 =
 * Plugin released with minimum features
