@@ -1,7 +1,9 @@
 === Post Series ===
+Contributors: mikslatvis
 Tags: post series, series
 Requires at least: 3.0
 Tested up to: 3.3.1
+Stable tag: trunk
 
 Allows you to add posts to a series and show the list by the posts.
  
@@ -28,7 +30,11 @@ Post Installation
 3. Update post and have a look at you new post series.
 4. Go to another post and give the same series name.
 
+== Frequently Asked Questions ==
+
+== Screenshots == 
+
 == Change log ==
 
 = Post Series 0.3 - 16/03/2012 =
-* Plugin released with minimum features
+* Plugin ready with minimum features
